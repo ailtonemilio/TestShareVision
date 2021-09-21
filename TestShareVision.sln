@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31605.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestShareVision", "TestShareVision\TestShareVision.csproj", "{8041430B-3299-449F-9ABA-4F77DDCB92E0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8041430B-3299-449F-9ABA-4F77DDCB92E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8041430B-3299-449F-9ABA-4F77DDCB92E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8041430B-3299-449F-9ABA-4F77DDCB92E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8041430B-3299-449F-9ABA-4F77DDCB92E0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {03B42589-6675-41EB-A2D5-6DE355CA2D21}
+	EndGlobalSection
+EndGlobal

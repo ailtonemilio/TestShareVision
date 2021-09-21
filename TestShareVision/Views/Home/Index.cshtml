@@ -1,0 +1,59 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<div class="jumbotron">
+    <h2>Test Emilio Silva for ShareVision in September 2021</h2>
+    <p class="lead">Write a javascript function that returns a promise. Inside the function create a deferred object and have an example of an ajax call. Depending on the data returned from the ajax call (you can assume the function returns 0 or 1), either resolve or reject a promise. </p>
+</div>
+<div class="form-group">
+    <p>Insert "true" or "false" in text box</p>
+    <input id="txtaction" class="form-control col-md-12" />
+    <button id="btnaction" type="button" class="btn btn-primary" data-dismiss="modal">Test</button>
+</div>
+
+
+@section Scripts {
+
+    <script>
+        //Write a javascript function that returns a promise
+        function returnPromise(numvariable) {
+
+            //promise
+            var promise = new Promise((resolve, reject) => {
+
+                //Inside the function create a deferred object and have an example of an ajax call
+                //Depending on the data returned from the ajax call (you can assume the function returns 0 or 1), either resolve or reject a promise.
+                $.ajax({
+                    type: 'get',
+                    dataType: 'json',
+                    cache: false,
+                    url: "/Home/Test",
+                    data: {
+                        returnNum: numvariable
+                    },
+                    success: function (response, textStatus, jqXHR) {
+                        resolve(response._returnNum);
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        reject('ALERT! Error in return info.');
+                    }
+                })
+            });
+
+            promise.then(resultPromise => {
+                alert(resultPromise);
+            }, errorPromisse => {
+                alert(errorPromisse);
+            });
+        }
+
+        $("#btnaction").click(function () {
+            returnPromise($('#txtaction').val());
+        });
+    </script>
+
+    
+}
